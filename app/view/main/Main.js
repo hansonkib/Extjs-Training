@@ -93,11 +93,16 @@ Ext.define('TrainingApp.view.main.Main', {
         //     html: '{loremIpsum}'
         // }
     }, {
-        title: 'Groups',
+        title: 'Students',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+            { 
+                xtype: 'studentview'
+            }
+        ]
+        // bind: {
+        //     html: '{loremIpsum}'
+        // }
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',
