@@ -13,8 +13,14 @@ Ext.define("TrainingApp.view.user.UserView",{
         { text:'handle',dataIndex:'handle' }
     ],
     tbar: [
-        {text: 'Add'},
-        {text: 'details'},
-        {text: 'remove'}
+        {text: 'Add',
+          tooltip: 'add new user'
+    },
+        {text: 'details',
+        tooltip: 'view user details'
+    },
+        {text: 'remove',
+        tooltip: 'delete user'
+    }
     ]
 });
