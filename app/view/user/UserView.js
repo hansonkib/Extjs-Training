@@ -11,5 +11,10 @@ Ext.define("TrainingApp.view.user.UserView",{
         { text:'first',dataIndex:'first' },
         { text:'last',dataIndex:'last' },
         { text:'handle',dataIndex:'handle' }
+    ],
+    tbar: [
+        {text: 'Add'},
+        {text: 'details'},
+        {text: 'remove'}
     ]
 });
