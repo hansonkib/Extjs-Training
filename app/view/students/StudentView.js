@@ -1,6 +1,7 @@
 Ext.define('TrainingApp.view.students.StudentsView',{
     extend: 'Ext.grid.Panel',
     xtype: 'studentview',
+    controller: 'studentviewcontroller',
     title:'students list',
     store:{
         type: 'students'
