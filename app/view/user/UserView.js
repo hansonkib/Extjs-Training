@@ -1,8 +1,9 @@
 Ext.define("TrainingApp.view.user.UserView",{
     extend: 'Ext.grid.Panel',
     xtype:'userview',
-    title: 'users',
     controller: 'userviewcontroller',
+    title: 'users',
+    
 
     selModel:'checkboxmodel',
     store:{

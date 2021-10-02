@@ -1,4 +1,4 @@
-Extend.define('TrainingApp.view.user.UserViewController',{
+Ext.define('TrainingApp.view.user.UserViewController',{
     extend: 'Ext.app.ViewController',
     alias: 'controller.userviewcontroller',
     onAddClick: function(){
