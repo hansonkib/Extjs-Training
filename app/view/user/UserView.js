@@ -2,6 +2,8 @@ Ext.define("TrainingApp.view.user.UserView",{
     extend: 'Ext.grid.Panel',
     xtype:'userview',
     title: 'users',
+    controller: 'userviewcontroller',
+
     selModel:'checkboxmodel',
     store:{
         type:'users'
@@ -14,7 +16,8 @@ Ext.define("TrainingApp.view.user.UserView",{
     ],
     tbar: [
         {text: 'Add',
-          tooltip: 'add new user'
+          tooltip: 'add new user',
+          handler: 'onAddClick'
     },
         {text: 'details',
         tooltip: 'view user details'
