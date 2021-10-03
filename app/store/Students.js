@@ -3,8 +3,8 @@ Ext.define('TrainingApp.store.Students',{
     alias: 'store.students',
     model:'TrainingApp.model.Student',
     proxy: {
-        type: 'ajax', //rest,json
-        url:'/resources/data.json',
+        type: 'rest', //rest,json
+        url:'http://localhost:3000/students',
         reader:{
             type: 'json',
             rootProperty:'students'

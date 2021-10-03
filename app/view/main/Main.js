@@ -105,10 +105,25 @@ Ext.define('TrainingApp.view.main.Main', {
         //     html: '{loremIpsum}'
         // }
     }, {
-        title: 'Settings',
+        title: 'Posts',
         iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }]
+        items: [
+            {
+                xtype: 'postview'
+            }
+        ]
+        // bind: {
+        //     html: '{loremIpsum}'
+        // }
+    },
+    { 
+        title: 'Comments',
+        iconCls: 'fa-cog',
+        items: [
+            {
+                xtype: 'commentsview'
+            }
+        ]
+    }
+]
 });
