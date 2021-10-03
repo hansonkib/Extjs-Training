@@ -97,7 +97,8 @@ Ext.define('TrainingApp.view.main.Main', {
         iconCls: 'fa-users',
         items: [
             { 
-                xtype: 'studentview'
+                xtype: 'studentsview',
+                reference: 'studentview'
             }
         ]
         // bind: {

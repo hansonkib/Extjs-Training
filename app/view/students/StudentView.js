@@ -1,6 +1,6 @@
 Ext.define('TrainingApp.view.students.StudentsView',{
     extend: 'Ext.grid.Panel',
-    xtype: 'studentview',
+    xtype: 'studentsview',
     controller: 'studentviewcontroller',
     title:'students list',
     store:{
@@ -8,13 +8,17 @@ Ext.define('TrainingApp.view.students.StudentsView',{
     },
     columns:[
         { 
-            text: 'id',dataIndex:'id'
+            text: 'id',dataIndex:'id',
+            flex:1,
+            hidden:true
         },
         {
-            text: 'name',dataIndex:'name'
+            text: 'name',dataIndex:'name',
+            flex:3
         },
         { 
-            text: 'regNo',dataIndex:'regNo'
+            text: 'regNo',dataIndex:'regNo',
+            flex:4
         },
         {
             text: 'county',dataIndex:'county'

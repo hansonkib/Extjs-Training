@@ -15,5 +15,12 @@ Ext.define('TrainingApp.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+    init: function(){
+        var main = this.getView();
+        var studentView = main.lookupReference('studentview');
+        console.log(main);
+        var store = studentView.getStore();
+        store.load();
     }
 });
