@@ -9,19 +9,19 @@ Ext.define('TrainingApp.view.students.StudentsView',{
     columns:[
         { 
             text: 'id',dataIndex:'id',
-            flex:1,
-            hidden:true
+            hidden:true // remaining width
         },
         {
             text: 'name',dataIndex:'name',
-            flex:3
+            flex:2 //2/6
         },
         { 
             text: 'regNo',dataIndex:'regNo',
-            flex:4
+            flex:3 //3/6
         },
         {
-            text: 'county',dataIndex:'county'
+            text: 'county',dataIndex:'county',
+            flex: 1 // 1/6
         }
     ]
 })
