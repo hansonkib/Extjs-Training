@@ -23,5 +23,27 @@ Ext.define('TrainingApp.view.students.StudentsView',{
             text: 'county',dataIndex:'county',
             flex: 1 // 1/6
         }
+    ],
+    tbar:[
+        {
+            text: 'Add',
+            tooltip: 'add new student',
+            handler: 'onAddClick'
+        },
+        {
+            text: 'details',
+            tooltip: 'view students details',
+            handler: 'onDetailsClick'
+        },
+        {
+            text: 'remove',
+            tooltip: 'remove student',
+            handler: 'onRemoveClick'
+        },
+        {
+            text: 'refresh',
+            tooltip: 'refresh',
+            handler: 'onRefreshClick'
+        }
     ]
 })
