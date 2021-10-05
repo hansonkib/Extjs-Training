@@ -5,8 +5,23 @@ Ext.define('TrainingApp.view.comments.CommentsViewController',{
         var commentsView = this.getView();
         var stores = commentsView.getStore();
         stores.load();
-        console.log(commentsView);
-        console.log(stores);
 
+    },
+    onAddnew: function(){
+        Ext.create({
+            xtype: 'commentform'
+        });
+    },
+    onViewDetails: function(){
+        console.log('details button clicked')
+    },
+    onDeleteComment: function(){
+        console.log('delete clicked')
+    },
+    onRefresh: function(){
+        var me = this,
+        grid = me.getView(),
+        stores = grid.getStore();
+        stores.reload();
     }
 });

@@ -25,5 +25,27 @@ Ext.define('TrainingApp.view.posts.PostView',{
             dataIndex:'body',
             flex:3
         }
+    ],
+    tbar:[
+        {
+            text: 'new',
+            tooltip: 'new Post',
+            handler: 'onAddNewPost'
+        },
+        {
+            text: 'Delete',
+            tooltip:'Delete post',
+            handler: 'onDeletePost'
+        },
+        {
+            text: 'Details',
+            tooltip: 'post Details',
+            handler: 'onDetailsClick'
+        },
+        {
+            text: 'Refresh',
+            tooltip: 'refresh',
+            handler: 'onRefresh'
+        }
     ]
 })

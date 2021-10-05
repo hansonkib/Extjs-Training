@@ -16,7 +16,12 @@ Ext.define('TrainingApp.model.Student',{
          {
             name:'county',
             type:'string'
-         }
+         },
+         { name: 'priceLastChange',
+           type: 'date',
+           dateFormat: 'm d Y', 
+        //    dateReadFormat: 'n/j' 
+        },
     ],
     validators:{
         regNo:'presence'

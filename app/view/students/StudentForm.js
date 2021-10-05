@@ -37,6 +37,12 @@ Ext.define('TrainingApp.view.students.StudentForm',{
                     xtype: 'textfield',
                     name:'county',
                     fieldLabel: 'County'
+                },
+                {
+                    xtype: 'datefield',
+                    fieldLabel: 'Updated on',
+                    name: 'priceLastChange',
+                    format: 'd, m, Y',
                 }
             ],
             buttons: [
