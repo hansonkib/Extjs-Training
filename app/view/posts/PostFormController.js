@@ -11,15 +11,24 @@ Ext.define('TrainingApp.view.posts.PostFormController',{
     onSave: function name() {
         var me = this,
         window = me.getView(),
-        form = window.lookupReference('add-post');
+        form = window.lookupReference('add-post').getForm();
+        var id = form.findField('id').getValue();
+        var url = 'http://localhost:3000/posts/'; //for post method
+        var method = 'POST';
+
+        if(id){
+            url += id;
+            method='PUT';
+        }
         if (form.isValid()) {
             form.submit({
-                url:'http://localhost:3000/posts',
+                url:url,
+                method:method,
                 success: function(form, action) {
                     Ext.Msg.alert('Success', action.result.msg);
                 },
                 failure: function(form, action) {
-                    if (action.response.status === 201) {
+                    if (action.response.status === 201 ||  action.response.status===200) {
                         Ext.Msg.alert('Success', "Saved successfully");
                     } else {
                         switch (action.failureType) {

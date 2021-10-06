@@ -54,5 +54,16 @@ Ext.define('TrainingApp.view.posts.PostView',{
             tooltip: 'refresh',
             handler: 'onRefresh'
         }
+    ],
+    selModel:
+    {
+        selType: 'checkboxmodel',
+        mode: 'SINGLE'
+    },
+    bbar: [
+        {
+            xtype: 'pagingtoolbar',
+            displayInfo:true
+        }
     ]
-})
+});

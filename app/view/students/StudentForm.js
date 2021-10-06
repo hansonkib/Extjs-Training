@@ -20,7 +20,8 @@ Ext.define('TrainingApp.view.students.StudentForm',{
                     xtype: 'numberfield',
                     name:'id',
                     fieldLabel: 'Student Id',
-                    minValue:0
+                    minValue:0,
+                    readOnly:true
                 },
                 {
                     xtype: 'textfield',

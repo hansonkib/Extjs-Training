@@ -10,5 +10,6 @@ Ext.define('TrainingApp.store.Posts',{
             rootProperty: 'posts'
         }
     },
+    pageSize:10,
     autoLoad:true
 });

@@ -77,7 +77,7 @@ Ext.define('TrainingApp.view.students.StudentsView',{
     selModel:
     {
         selType: 'checkboxmodel',
-        mode: 'MULTI'
+        mode: 'SINGLE'
     }
     ,
     bbar: [
@@ -86,4 +86,4 @@ Ext.define('TrainingApp.view.students.StudentsView',{
             displayInfo:true
         }
     ]
-})
+});

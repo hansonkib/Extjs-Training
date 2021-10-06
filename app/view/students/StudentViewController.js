@@ -7,13 +7,27 @@ Ext.define('TrainingApp.view.students.StudentsViewController',{
         stores.load();
     },
     onAddClick: function(){
-        Ext.create({
-            xtype: 'studentform'
-        });
+        var me = this;
+        me.showForm();
     },
     onDetailsClick: function(){
-        console.log('details button clicked')
+        var me = this,
+            grid = me.getView();
+        var records = grid.getSelectionModel().getSelection();
+        if(records[0]){
+            me.showForm(records[0]);
+        }
     },
+    showForm: function(record){
+        var window = Ext.create({
+            xtype: 'studentform'
+        });
+        if(record){
+            var form = window.lookupReference('add-form').getForm();
+            form.loadRecord(record)
+        }
+    }
+    ,
     onRemoveClick: function(){
         console.log('delete button clicked')
     },

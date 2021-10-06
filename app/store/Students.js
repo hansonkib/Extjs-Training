@@ -10,6 +10,6 @@ Ext.define('TrainingApp.store.Students',{
             rootProperty:'students'
         }
     },
-    // pagesize:2,
+    pageSize:10,
     autoLoad:true
 });

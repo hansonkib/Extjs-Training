@@ -26,7 +26,8 @@ Ext.define('TrainingApp.view.posts.PostForm',{
                     xtype: 'numberfield',
                     name:'id',
                     fieldLabel: 'post id',
-                    minValue: 1
+                    minValue: 1,
+                    readOnly:true
                 },
                 {
                     xtype: 'textfield',

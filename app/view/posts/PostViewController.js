@@ -7,15 +7,28 @@ Ext.define('TrainingApp.view.posts.PostViewController',{
         stores.load();
     },
     onAddNewPost: function(){
-        Ext.create({
-            xtype: 'postform'
-        });
+        var me = this;
+        me.showForm();
     },
     onDeletePost: function(){
         console.log('Delete post button clicked');
     },
     onDetailsClick: function(){
-        console.log('Details button clicked');
+        var me = this,
+        grid = me.getView();
+    var records = grid.getSelectionModel().getSelection();
+    if(records[0]){
+        me.showForm(records[0]);
+    }
+    },
+    showForm: function(record){
+        var window = Ext.create({
+            xtype: 'postform'
+        });
+        if(record){
+            var form = window.lookupReference('add-post').getForm();
+            form.loadRecord(record)
+        }
     },
     onRefresh : function(){
         var me = this,
