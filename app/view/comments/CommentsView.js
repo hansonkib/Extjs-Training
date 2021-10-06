@@ -41,5 +41,16 @@ Ext.define('TrainingApp.view.CommentsView',{
             tooltip: 'refresh data',
             handler: 'onRefresh'
         }
+    ],
+    selModel:
+    {
+        selType: 'checkboxmodel',
+        mode: 'SINGLE'
+    },
+    bbar: [
+        {
+            xtype: 'pagingtoolbar',
+            displayInfo:true
+        }
     ]
-})
+});

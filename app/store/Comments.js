@@ -10,5 +10,6 @@ Ext.define('TrainingApp.store.Comments',{
             rootProperty: 'coments'
         }
     },
+    pageSize:10,
     autoLoad:true
 })

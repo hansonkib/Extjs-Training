@@ -8,12 +8,25 @@ Ext.define('TrainingApp.view.comments.CommentsViewController',{
 
     },
     onAddnew: function(){
-        Ext.create({
-            xtype: 'commentform'
-        });
+        var me = this;
+        me.showForm();
     },
     onViewDetails: function(){
-        console.log('details button clicked')
+        var me = this,
+        grid = me.getView();
+    var records = grid.getSelectionModel().getSelection();
+    if(records[0]){
+        me.showForm(records[0]);
+    }
+    },
+    showForm: function(record){
+        var window = Ext.create({
+            xtype: 'commentform',
+        });
+        if(record){
+            var form = window.lookupReference('add-comment').getForm();
+            form.loadRecord(record)
+        }
     },
     onDeleteComment: function(){
         console.log('delete clicked')

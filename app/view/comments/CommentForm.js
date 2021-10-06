@@ -24,7 +24,8 @@ items: [
             { 
                 xtype: 'numberfield',
                 name:'id',
-                fieldLabel: 'Comment id'
+                fieldLabel: 'Comment id',
+                readOnly:true
             },
             {
                 xtype: 'textfield',
