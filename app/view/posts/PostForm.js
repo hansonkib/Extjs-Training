@@ -37,6 +37,12 @@ Ext.define('TrainingApp.view.posts.PostForm',{
                     xtype: 'textfield',
                     name:'body',
                     fieldLabel: 'post body'
+                },
+                {
+                    xtype: 'datefield',
+                    fieldLabel: 'Updated on',
+                    name: 'dateUpdated',
+                    format: 'd-m-Y',
                 }
             ],
             buttons:[

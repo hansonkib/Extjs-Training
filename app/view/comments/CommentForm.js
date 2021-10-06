@@ -40,6 +40,12 @@ items: [
                 xtype: 'textfield',
                 name:'body',
                 fieldLabel: 'comment body'
+            },
+            {
+                xtype: 'datefield',
+                fieldLabel: 'Updated on',
+                name: 'dateUpdated',
+                format: 'd-m-Y',
             }
         ],
         buttons: [

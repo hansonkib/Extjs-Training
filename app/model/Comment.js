@@ -5,7 +5,8 @@ Ext.define('TrainingApp.model.Comment',{
         {name:'id',type:'integer'},
         {name:'name',type:'string'},
         {name:'email',type:'string'},
-        {name:'body',type:'string'}
+        {name:'body',type:'string'},
+        { name: 'dateUpdated',type: 'date',dateFormat: 'm-d-Y'},
     ],
     validators: {
         postId:'presence'

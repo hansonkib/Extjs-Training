@@ -11,7 +11,14 @@ Ext.define('TrainingApp.view.CommentsView',{
         { text:'id',dataIndex:'id'},
         { text:'name',dataIndex:'name',flex:2},
         { text:'email',dataIndex:'email',flex:2},
-        { text:'body',dataIndex:'body',flex:3}
+        { text:'body',dataIndex:'body',flex:3},
+        {
+            text: 'Last Updated',
+            dataIndex: 'dateUpdated',
+            sortable: true,
+            formatter: 'date("m-d-Y")',
+            // flex:4
+        }
     ],
     tbar:[
         {

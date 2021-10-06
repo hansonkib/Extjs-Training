@@ -73,5 +73,17 @@ Ext.define('TrainingApp.view.students.StudentsView',{
             tooltip: 'refresh',
             handler: 'onRefreshClick'
         }
+    ],
+    selModel:
+    {
+        selType: 'checkboxmodel',
+        mode: 'SINGLE'
+    }
+    ,
+    bbar: [
+        {
+            xtype: 'pagingtoolbar',
+            displayInfo:true
+        }
     ]
 })
