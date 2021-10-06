@@ -5,7 +5,7 @@ Ext.define('TrainingApp.model.Post',{
         {name:'id',type:'integer'},
         {name:'title',type:'string'},
         {name:'body',type:'string'},
-        { name: 'dateUpdated',type: 'date',dateFormat: 'm-d-Y'},
+        { name: 'dateUpdated',type: 'date'},
     ],
     validators: {
         userId:'presence'

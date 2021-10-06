@@ -7,8 +7,12 @@ Ext.define('TrainingApp.store.Posts',{
         url:'http://localhost:3000/posts',
         reader: {
             type: 'json',
-            rootProperty: 'posts'
+            rootProperty: 'posts',
+            totalProperty: 'totalCount'
         }
+    },
+    convert:function(v,j){
+        return new Date(v.replace(/\/Date((\d+))\//, '$1'));
     },
     pageSize:10,
     autoLoad:true

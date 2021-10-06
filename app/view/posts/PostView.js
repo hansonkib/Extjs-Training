@@ -29,8 +29,7 @@ Ext.define('TrainingApp.view.posts.PostView',{
             text: 'Last Updated',
             dataIndex: 'dateUpdated',
             sortable: true,
-            formatter: 'date("m-d-Y")',
-            // flex:4
+            formatter: 'date("m/d/Y")',
         }
     ],
     tbar:[

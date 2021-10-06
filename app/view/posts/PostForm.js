@@ -35,7 +35,7 @@ Ext.define('TrainingApp.view.posts.PostForm',{
                     fieldLabel: 'post title',
                 },
                 {
-                    xtype: 'textfield',
+                    xtype: 'textarea',
                     name:'body',
                     fieldLabel: 'post body'
                 },
@@ -43,7 +43,7 @@ Ext.define('TrainingApp.view.posts.PostForm',{
                     xtype: 'datefield',
                     fieldLabel: 'Updated on',
                     name: 'dateUpdated',
-                    format: 'd-m-Y',
+                    // format: 'd-m-Y',
                 }
             ],
             buttons:[

@@ -38,7 +38,7 @@ items: [
                 fieldLabel: 'email address'
             },
             {
-                xtype: 'textfield',
+                xtype: 'textarea',
                 name:'body',
                 fieldLabel: 'comment body'
             },
@@ -46,7 +46,7 @@ items: [
                 xtype: 'datefield',
                 fieldLabel: 'Updated on',
                 name: 'dateUpdated',
-                format: 'd-m-Y',
+                formatter: 'date("m/d/Y")',
             }
         ],
         buttons: [
