@@ -8,7 +8,8 @@ Ext.define('TrainingApp.store.Students',{
         url:'http://localhost:3000/students',
         reader:{
             type: 'json',
-            rootProperty:'students'
+            rootProperty:'students',
+            totalProperty: 'totalCount'
         }
     },
     pageSize:10,

@@ -20,8 +20,9 @@ Ext.define("TrainingApp.view.user.UserView",{
           tooltip: 'add new user',
           handler: 'onAddClick'
     },
-        {text: 'details',
-        tooltip: 'view user details'
+        {text: 'layouts',
+        tooltip: 'view user details',
+        handler: 'onLayoutClick'
     },
         {text: 'remove',
         tooltip: 'delete user'

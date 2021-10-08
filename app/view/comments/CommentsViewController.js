@@ -29,7 +29,27 @@ Ext.define('TrainingApp.view.comments.CommentsViewController',{
         }
     },
     onDeleteComment: function(){
-        console.log('delete clicked')
+        var me = this,
+        grid = me.getView();
+    var records = grid.getSelectionModel().getSelection();
+    if(records[0]){
+        var record = records[0];
+        Ext.Ajax.request({
+            url: `http://localhost:3000/comments/${record.get('id')}`,
+            method: 'DELETE',
+            success: function(response, eOpts) {
+                console.log(response);
+                console.log(eOpts);
+                Ext.Msg.alert('Success', "Deleted successfully");
+            },
+            failure: function(response, eOpts) {
+                console.log(response);
+                console.log(eOpts);
+                Ext.Msg.alert('Success', "failed to delete");
+            }
+        });
+        Ext.getStore('comments').reload();
+    }
     },
     onRefresh: function(){
         var me = this,

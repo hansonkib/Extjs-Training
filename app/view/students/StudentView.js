@@ -41,6 +41,9 @@ Ext.define('TrainingApp.view.students.StudentsView',{
                     text: 'county',dataIndex:'county',
                     // width:100
                     // flex: 1 // 1/6
+                },
+                {
+                    text: 'about', dataIndex:'about',
                 }
             ],
         },
@@ -82,8 +85,12 @@ Ext.define('TrainingApp.view.students.StudentsView',{
     ,
     bbar: [
         {
-            xtype: 'pagingtoolbar',
-            displayInfo:true
+        xtype: 'pagingtoolbar',
+        displayInfo: true,
+        // displayMsg: 'Displaying topics {0} - {1} of {2}',
+        // emptyMsg: "No records to display",
+            // xtype: 'pagingtoolbar',
+            // displayInfo:true
         }
     ]
 });

@@ -44,6 +44,13 @@ Ext.define('TrainingApp.view.students.StudentForm',{
                     fieldLabel: 'Updated on',
                     name: 'priceLastChange',
                     format: 'd, m, Y',
+                },
+                {
+                    xtype: 'htmleditor',
+                    name:'about',
+                    enableColors: false,
+                    enableAlignments: false,
+                    renderTo: Ext.getBody()
                 }
             ],
             buttons: [

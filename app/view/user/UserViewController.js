@@ -3,5 +3,10 @@ Ext.define('TrainingApp.view.user.UserViewController',{
     alias: 'controller.userviewcontroller',
     onAddClick: function(){
         TrainingApp.util.Util.log("Button clicked")
+    },
+    onLayoutClick: function(){
+        Ext.create({
+            xtype: 'borderlayout'
+        });
     }
 });

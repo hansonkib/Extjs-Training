@@ -1,6 +1,7 @@
 Ext.define('TrainingApp.store.Posts',{
     extend: 'Ext.data.Store',
     alias: 'store.posts',
+    storeId: 'posts',
     model: 'TrainingApp.model.Post',
     proxy: {
         type: 'rest',

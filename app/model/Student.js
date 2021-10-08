@@ -22,6 +22,10 @@ Ext.define('TrainingApp.model.Student',{
            dateFormat: 'm d Y', 
         //    dateReadFormat: 'n/j' 
         },
+        {
+            name:'about',
+            type: 'string'
+        }
     ],
     validators:{
         regNo:'presence'

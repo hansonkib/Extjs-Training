@@ -1,4 +1,4 @@
-Ext.define('APPS.overrides.data.proxy.Server', {
+Ext.define('TrainingApp.overrides.data.proxy.Server', {
     override: 'Ext.data.proxy.Server',
     config: {
         startParam: '_start',

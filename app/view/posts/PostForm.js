@@ -30,14 +30,22 @@ Ext.define('TrainingApp.view.posts.PostForm',{
                     readOnly:true
                 },
                 {
-                    xtype: 'textfield',
+                    xtype: 'textarea',
                     name:'title',
                     fieldLabel: 'post title',
                 },
+                // {
+                //     xtype: 'textarea',
+                //     name:'body',
+                //     fieldLabel: 'post body'
+                // },
                 {
-                    xtype: 'textarea',
+                    xtype: 'htmleditor',
                     name:'body',
-                    fieldLabel: 'post body'
+                    fieldLabel: 'post body',
+                    enableColors: true,
+                    enableAlignments: false,
+                    renderTo: Ext.getBody()
                 },
                 {
                     xtype: 'datefield',
