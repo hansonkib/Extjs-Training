@@ -124,6 +124,33 @@ Ext.define('TrainingApp.view.main.Main', {
                 xtype: 'commentsview'
             }
         ]
-    }
+    },
+    { 
+        title: 'Form HBox layout',
+        // iconCls: 'fa-cog',
+        items: [
+            {
+                xtype: 'form-hboxlayout'
+            }
+        ]
+    },
+    { 
+        title: 'column layout form',
+        // iconCls: 'fa-cog',
+        items: [
+            {
+                xtype: 'form-multicolumn',
+            }
+        ]
+    },
+    { 
+        title: 'Accordion Layout layout',
+        // iconCls: 'fa-cog',
+        items: [
+            {
+                xtype: 'accordionlayout',
+            }
+        ]
+    },
 ]
 });

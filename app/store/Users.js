@@ -1,24 +1,19 @@
-Ext.define('TrainingApp.store.Users',{
+Ext.define('TrainingApp.store.Users', {
     extend: 'Ext.data.Store',
     alias: 'store.users',
-    fields:[
-            {name:'id'},
-            {name:'first'},
-            {name:'last'},
-            {name:'handle'},
-        ],
-        data: [
-            {
-            id:1,
-            first:'hanson',
-            last:'sang',
-            handle:'@hansonkib'
-            },
-            {
-                id:2,
-                first:'rono',
-                last:'sang',
-                handle:'@rono'
-                }
-        ]
-})
+    model: 'TrainingApp.model.User',
+    proxy: {
+        type: 'rest',
+        url: 'http://localhost:3000/users',
+        // url: 'http://localhost:8080/Jotech/api/users',
+        reader: {
+            type: 'json',
+            rootProperty: 'data',
+            totalProperty: 'totalCount'
+        }
+    },
+    autoLoad: true,
+    pageSize: 1,
+
+
+});
