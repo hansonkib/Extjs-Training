@@ -17,7 +17,7 @@ Ext.define('TrainingApp.view.user.UserForm', {
     items: [{
         xtype: 'form',
         reference: 'add-form',
-        bodyPadding: 5,
+        bodyPadding: 6,
         jsonSubmit: true,
         defaults: {
             anchor: '100%'
