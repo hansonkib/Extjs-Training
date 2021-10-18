@@ -9,6 +9,28 @@ Ext.define('TrainingApp.view.user.UserViewController',{
         var stores = userView.getStore();
         stores.load();
     },
+    onBorderLayout: function() {
+        Ext.create({
+            xtype: 'borderlayout'
+        });
+    },
+    onVboxLayout: function(){
+        Ext.create({
+            xtype: 'vboxlayout'
+        })
+    }
+    ,
+    onFormLayout: function(){
+        Ext.create({
+            xtype: 'formlayout'
+        });
+    }
+    ,
+    onAccordionLayout: function(){
+        Ext.create({
+            xtype: 'accordionlayout'
+        });
+    },
     onAddnewUser: function(){
         var me = this;
             me.showForm();
