@@ -1,4 +1,4 @@
-Ext.define("TrainingApp.view.user.UserView",{
+Ext.define('TrainingApp.view.user.UserView', {
     extend: 'Ext.grid.GridPanel',
     xtype: 'userview',
     controller: 'userviewcontroller',
@@ -9,9 +9,9 @@ Ext.define("TrainingApp.view.user.UserView",{
     title: 'Users',
     selModel: 'checkboxmodel',
     columns: [{
-        text: '#',
-        dataIndex: 'id'
-    },
+            text: '#',
+            dataIndex: 'id'
+        },
         {
             text: 'Name',
             dataIndex: 'name'
@@ -22,34 +22,10 @@ Ext.define("TrainingApp.view.user.UserView",{
         },
 
     ],
-    tbar: [
-        {
-            text: 'Border layout',
-            tooltip: 'Border layout',
-            handler: 'onBorderLayout'
-        },
-        {
-            text: 'VBox layout',
-            tooltip: 'Border layout',
-            handler: 'onVboxLayout'
-        },
-        {
-            text: 'Form layout',
-            tooltip: 'form layout',
-            handler: 'onFormLayout'
-        },
-        {
-            text: 'According Layout',
-            tooltip: 'Accordion Layout',
-            handler: 'onAccordionLayout'
-        },
-        {
-        text:'add',
-        tooltip:'Add new User',
-        handler: 'onAddnewUser'
-    }],
     bbar: {
         xtype: 'pagingtoolbar',
         displayInfo: true
     }
+
+
 });

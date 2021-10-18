@@ -5,7 +5,6 @@ Ext.define('TrainingApp.store.Users', {
     proxy: {
         type: 'rest',
         url: 'http://localhost:3000/users',
-        // url: 'http://localhost:8080/Jotech/api/users',
         reader: {
             type: 'json',
             rootProperty: 'data',
