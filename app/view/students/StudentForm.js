@@ -1,70 +1,71 @@
-Ext.define('TrainingApp.view.students.StudentForm',{
+Ext.define('TrainingApp.view.students.StudentForm', {
     extend: 'Ext.window.Window',
     xtype: 'studentform',
-    width:520,
     controller: 'studentformcontroller',
+    width: 520,
     shadow: true,
     modal: true,
-    title: 'Students Form',
-    autoShow:true, // to autoshow the modal once it is created
-    items: [
-        {
-            xtype: 'form',
-            reference: 'add-form',
-            jsonSubmit:true,
-            defaults: {
-                anchor: '100%'
-            },
-            items: [
-                {
-                    xtype: 'numberfield',
-                    name:'id',
-                    fieldLabel: 'Student Id',
-                    minValue:0,
-                    readOnly:true
-                },
-                {
-                    xtype: 'textfield',
-                    name:'name',
-                    fieldLabel: 'Student name'
-
-                },
-                {
-                    xtype: 'textfield',
-                    name:'regNo',
-                    fieldLabel: 'Registration number'
-                },
-                {
-                    xtype: 'textfield',
-                    name:'county',
-                    fieldLabel: 'County'
-                },
-                {
-                    xtype: 'datefield',
-                    fieldLabel: 'Updated on',
-                    name: 'priceLastChange',
-                    format: 'd, m, Y',
-                },
-                {
-                    xtype: 'htmleditor',
-                    name:'about',
-                    enableColors: false,
-                    enableAlignments: false,
-                    renderTo: Ext.getBody()
-                }
-            ],
-            buttons: [
-                {
-                    xtype: 'button',
-                    text: 'Save',
-                    handler: 'onSave'
-                },
-                {
-                    xtype: 'button',
-                    text: 'refresh',
-                    handler: 'onRefresh'
-                }
-            ]
+    autoShow: true,
+    viewModel: {
+        data: {
+            record: null
         }
-    ]
-})
+    },
+    bind: {
+        title: 'Hello {record.regNo}'
+    },
+    // title: 'Student Form',
+    //content of window -form
+    items: [{
+        xtype: 'form',
+        reference: 'add-form',
+        jsonSubmit: true,
+        defaults: {
+            anchor: '100%'
+        },
+        //content of the form
+        items: [{
+                xtype: 'numberfield',
+                name: 'id',
+                fieldLabel: 'Student ID',
+                minValue: 0,
+                readOnly: true,
+            },
+            {
+                xtype: 'textfield',
+                name: 'name',
+                fieldLabel: 'Name'
+            },
+            {
+                xtype: 'textfield',
+                name: 'regNo',
+                bind: {
+                    value: '{record.regNo}'
+                },
+                fieldLabel: 'Registration Number'
+            },
+            {
+                xtype: 'textfield',
+                name: 'county',
+                fieldLabel: 'County',
+                viewModel: {
+                    data: {
+
+                    }
+                }
+            }
+        ],
+        buttons: [{
+                xtype: 'button',
+                text: 'Reset',
+                handler: 'onReset'
+            },
+            {
+                xtype: 'button',
+                text: 'Save',
+                handler: 'onSave'
+
+            }
+        ]
+    }]
+});
