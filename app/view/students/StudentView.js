@@ -1,96 +1,61 @@
-Ext.define('TrainingApp.view.students.StudentsView',{
+Ext.define('TrainingApp.view.students.StudentView', {
     extend: 'Ext.grid.Panel',
-    xtype: 'studentsview',
+    xtype: 'studentview',
     controller: 'studentviewcontroller',
-    title:'students list',
-    columnLines: true,
-    signTpl: '<span style="' +
-            'color:{value:sign(\'"#cf4c35"\',\'"#73b51e"\')}"' +
-        '>{text}</span>',
-    store:{
-        type: 'students',
-        sorters: {
-            property: 'name',
-            direction: 'DESC'
-        }
+    //mandatory properties for grid => columns, store
+    store: {
+        type: 'students'
     },
-    columns:[
-        { 
-            text: 'id',dataIndex:'id',
-            sortable: true,
+    columns: [{
+            text: 'ID',
+            dataIndex: 'id',
+            hidden: true, //fixed
         },
         {
-            text: 'message body',
-            columns:[
-                { 
-                    text: 'id',dataIndex:'id',
-                    hidden:true,
-                    // width:75
-                },
-                {
-                    text: 'name',dataIndex:'name',
-                    // width:80
-                    // flex:2 //2/6
-                },
-                { 
-                    text: 'regNo',dataIndex:'regNo',
-                    // width:75
-                    // flex:3 //3/6
-                },
-                {
-                    text: 'county',dataIndex:'county',
-                    // width:100
-                    // flex: 1 // 1/6
-                },
-                {
-                    text: 'about', dataIndex:'about',
-                }
-            ],
+            text: 'Name',
+            dataIndex: 'name', //2/6
+            flex: 2
         },
         {
-            text: 'Last Updated',
-            dataIndex: 'priceLastChange',
-            sortable: true,
-            formatter: 'date("m/d/Y")',
-            // flex:4
+            text: 'Registration Number',
+            dataIndex: 'regNo', //3/6
+            flex: 3
+        },
+        {
+            text: 'County',
+            dataIndex: 'county', //1/6
+            flex: 1
         }
+
     ],
-    tbar:[
-        {
+    tbar: [{
             text: 'Add',
-            tooltip: 'add new student',
-            handler: 'onAddClick'
+            handler: 'onAddButtonClick',
         },
         {
-            text: 'details',
-            tooltip: 'view students details',
-            handler: 'onDetailsClick'
+            text: 'Details',
+            ui: 'btn-ui',
+            handler: 'onDetailsButtonClick', //update
         },
         {
-            text: 'remove',
-            tooltip: 'remove student',
-            handler: 'onRemoveClick'
+            text: 'Remove',
+            handler: 'onRemoveButtonClick',
         },
         {
-            text: 'refresh',
-            tooltip: 'refresh',
-            handler: 'onRefreshClick'
+            text: 'Refresh',
+            handler: 'onRefreshButtonClick',
         }
+
+
     ],
-    selModel:
-    {
-        selType: 'checkboxmodel',
-        mode: 'SINGLE'
-    }
-    ,
-    bbar: [
-        {
+    selModel: 'checkboxmodel',
+    //  {
+    //     selType: 'checkboxmodel',
+    //     mode: 'MULTI'
+    // },
+    bbar: {
         xtype: 'pagingtoolbar',
-        displayInfo: true,
-        // displayMsg: 'Displaying topics {0} - {1} of {2}',
-        // emptyMsg: "No records to display",
-            // xtype: 'pagingtoolbar',
-            // displayInfo:true
-        }
-    ]
-});
+        displayInfo: true
+    }
+
+})
